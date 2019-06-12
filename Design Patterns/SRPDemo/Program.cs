@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,26 @@ namespace DotNetDesignPatternDemos.SOLID.SRP
         {
             File.WriteAllText(filename, ToString());
         }
+
+        public void Load(string filename)
+        {
+
+        }
+
+        public void Load(Uri uri)
+        {
+
+        }
+    }
+
+    //Handles the responsiblity of Persisting objects
+    public class Persistence
+    {
+        public void SaveToFile(Journal journal, string filename, bool overwrite = false)
+        {
+            if (overwrite || !File.Exists(filename))
+                File.WriteAllText(filename, journal.ToString());
+        }
     }
 
     public class SRPDemo
@@ -50,6 +71,11 @@ namespace DotNetDesignPatternDemos.SOLID.SRP
             j.AddEntry("I wrote an API to fetch Documents.");
             j.AddEntry("I need to finish API integration by tomorrow.");
             WriteLine(j);
+
+            var p = new Persistence();
+            var filename = @"C:\Users\Abhishek kandi\Desktop\journal.txt";
+            p.SaveToFile(j, filename);
+            Process.Start(filename);
 
             ReadLine();
         }
