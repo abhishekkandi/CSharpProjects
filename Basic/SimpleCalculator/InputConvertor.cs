@@ -2,9 +2,9 @@
 
 namespace SimpleCalculator
 {
-    internal class InputConvertor
+    public class InputConvertor
     {
-        internal double ConvertInputToNumeric(string argTextInput)
+        public double ConvertInputToNumeric(string argTextInput)
         {
             double convertedNumber;
             if (!double.TryParse(argTextInput, out convertedNumber))

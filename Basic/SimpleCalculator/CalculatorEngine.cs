@@ -2,9 +2,9 @@
 
 namespace SimpleCalculator
 {
-    internal class CalculatorEngine
+    public class CalculatorEngine
     {
-        internal double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
+        public double Calculate(string argOperation, double argFirstNumber, double argSecondNumber)
         {
             double result;
 
