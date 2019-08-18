@@ -12,9 +12,9 @@ namespace SudokuSolver.Workers
         {
             StringBuilder key = new StringBuilder();
 
-            for (int row = 0; row <= sudokuBoard.GetLength(0); row++)
+            for (int row = 0; row < sudokuBoard.GetLength(0); row++)
             {
-                for (int col = 0; col <= sudokuBoard.GetLength(1); col++)
+                for (int col = 0; col < sudokuBoard.GetLength(1); col++)
                 {
                     key.Append(sudokuBoard[row,col]);
                 }
@@ -25,9 +25,9 @@ namespace SudokuSolver.Workers
 
         public bool IsSolved(int[,] sudokuBoard)
         {
-            for (int row = 0; row <= sudokuBoard.GetLength(0); row++)
+            for (int row = 0; row < sudokuBoard.GetLength(0); row++)
             {
-                for (int col = 0; col <= sudokuBoard.GetLength(1); col++)
+                for (int col = 0; col < sudokuBoard.GetLength(1); col++)
                 {
                     if (sudokuBoard[row, col] == 0 || sudokuBoard[row, col].ToString().Length > 1)
                     {

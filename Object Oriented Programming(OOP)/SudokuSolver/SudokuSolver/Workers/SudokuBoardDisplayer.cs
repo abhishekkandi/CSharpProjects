@@ -12,10 +12,10 @@ namespace SudokuSolver.Workers
         {
             if (!title.Equals(string.Empty)) Console.WriteLine("{0} {1}", title, Environment.NewLine);
 
-            for(int row = 0; row <= sudokuBoard.GetLength(0); row++)
+            for(int row = 0; row < sudokuBoard.GetLength(0); row++)
             {
                 Console.Write("|");
-                for (int col = 0; col <= sudokuBoard.GetLength(1); col++)
+                for (int col = 0; col < sudokuBoard.GetLength(1); col++)
                 {
                     Console.Write("{0}{1}", sudokuBoard[row, col], "|");
                 }

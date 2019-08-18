@@ -18,15 +18,15 @@ namespace SudokuSolver.Strategies
 
         public int[,] Solve(int[,] sudokuBoard)
         {
-            for (int row = 0; row <= sudokuBoard.GetLength(0); row++)
+            for (int row = 0; row < sudokuBoard.GetLength(0); row++)
             {
-                for (int col = 0; col <= sudokuBoard.GetLength(1); col++)
+                for (int col = 0; col < sudokuBoard.GetLength(1); col++)
                 {
                     if (sudokuBoard[row, col] == 0 || sudokuBoard[row, col].ToString().Length > 1)
                     {
                         var possibilitiesInRowAndCol = GetPossibilitiesInRowAndCol(sudokuBoard, row, col);
-                        var possibilitiesInGroup = GetPossibilitiesInGroup(sudokuBoard, row, col);
-                        sudokuBoard[row, col] = GetPossibilityIntersection(possibilitiesInRowAndCol, possibilitiesInGroup);
+                        var possibilitiesInBlock = GetPossibilitiesInBlock(sudokuBoard, row, col);
+                        sudokuBoard[row, col] = GetPossibilityIntersection(possibilitiesInRowAndCol, possibilitiesInBlock);
                     }
                 }
             }
@@ -53,7 +53,7 @@ namespace SudokuSolver.Strategies
             return Convert.ToInt32(string.Join(string.Empty, possibilities.Select(p => p).Where(p => p != 0)));
         }
 
-        private int GetPossibilitiesInGroup(int[,] sudokuBoard, int givenRow, int givenCol)
+        private int GetPossibilitiesInBlock(int[,] sudokuBoard, int givenRow, int givenCol)
         {
             int[] possibilities = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
@@ -78,11 +78,11 @@ namespace SudokuSolver.Strategies
             return cellDigit != 0 && cellDigit.ToString().Length == 1;
         }
 
-        private int GetPossibilityIntersection(int possibilitiesInRowAndCol, int possibilitiesInGroup)
+        private int GetPossibilityIntersection(int possibilitiesInRowAndCol, int possibilitiesInBlock)
         {
             var possibilitiesInRowAndColCharArray = possibilitiesInRowAndCol.ToString().ToCharArray();
-            var possibilitiesInGroupCharArray = possibilitiesInGroup.ToString().ToCharArray();
-            var possibilitiesSubset = possibilitiesInRowAndColCharArray.Intersect(possibilitiesInGroupCharArray);
+            var possibilitiesInBlockCharArray = possibilitiesInBlock.ToString().ToCharArray();
+            var possibilitiesSubset = possibilitiesInRowAndColCharArray.Intersect(possibilitiesInBlockCharArray);
 
             return Convert.ToInt32(string.Join(string.Empty, possibilitiesSubset));
         }

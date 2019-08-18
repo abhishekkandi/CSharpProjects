@@ -22,7 +22,8 @@ namespace SudokuSolver.Strategies
         {
             List<ISudokuStrategy> strategies = new List<ISudokuStrategy>()
             {
-
+                new SimpleMarkUpStrategy(_sudokuMapper),
+                new NakedPairsStrategy(_sudokuMapper)
             };
 
             var currentState = _sudokuBoardStateManager.GenerateState(sudokuBoard);
