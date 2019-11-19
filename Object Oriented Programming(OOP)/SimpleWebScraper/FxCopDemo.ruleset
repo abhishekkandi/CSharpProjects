@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
+    <Rule Id="CA1008" Action="Warning" />
+    <Rule Id="CA1012" Action="Warning" />
+    <Rule Id="CA1014" Action="Warning" />
+    <Rule Id="CA1017" Action="Warning" />
+    <Rule Id="CA1024" Action="Warning" />
+    <Rule Id="CA1027" Action="Warning" />
+    <Rule Id="CA1033" Action="Warning" />
+    <Rule Id="CA1050" Action="Warning" />
+    <Rule Id="CA1060" Action="Warning" />
+    <Rule Id="CA1501" Action="Warning" />
+    <Rule Id="CA1502" Action="Warning" />
+    <Rule Id="CA1505" Action="Warning" />
+    <Rule Id="CA1506" Action="Warning" />
+    <Rule Id="CA1508" Action="Warning" />
+    <Rule Id="CA1509" Action="Warning" />
+    <Rule Id="CA1708" Action="Warning" />
+    <Rule Id="CA1711" Action="Warning" />
+    <Rule Id="CA1725" Action="Warning" />
+    <Rule Id="CA2217" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeQuality.CSharp.Analyzers" RuleNamespace="Microsoft.CodeQuality.CSharp.Analyzers">
+    <Rule Id="CA1003" Action="Warning" />
+    <Rule Id="CA1019" Action="Warning" />
+  </Rules>
+</RuleSet>
