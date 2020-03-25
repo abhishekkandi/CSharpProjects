@@ -15,3 +15,9 @@ namespace EventDelegate
         }
     }
 }
+
+
+/*Reference: 
+ * Publisher/Subscriber Pattern With Event /Delegate and EventAggregator
+ * https://www.c-sharpcorner.com/UploadFile/pranayamr/publisher-or-subscriber-pattern-with-event-or-delegate-and-e/
+ */
