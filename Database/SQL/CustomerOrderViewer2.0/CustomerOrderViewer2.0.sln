@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer2.0", "CustomerOrderViewer2.0\CustomerOrderViewer2.0.csproj", "{97D14193-6D82-43DD-A13E-DBF1FE0E33EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D14193-6D82-43DD-A13E-DBF1FE0E33EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D14193-6D82-43DD-A13E-DBF1FE0E33EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D14193-6D82-43DD-A13E-DBF1FE0E33EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D14193-6D82-43DD-A13E-DBF1FE0E33EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EA30762-50E0-4EB1-A952-64BEE733412B}
+	EndGlobalSection
+EndGlobal
