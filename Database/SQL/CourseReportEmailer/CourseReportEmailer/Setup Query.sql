@@ -63,9 +63,9 @@ CREATE VIEW [dbo].[EnrollmentReport] AS
 		t3.[Description]
 	FROM 
 		Enrollments t1
-	LEFT JOIN
+	INNER JOIN
 		Student t2 ON t2.StudentId = t1.StudentId
-	LEFT JOIN
+	INNER JOIN
 		Course t3 ON t3.CourseId = t1.CourseId;
 GO
 
